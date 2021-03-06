@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DoublyLinkedList
 {
@@ -9,23 +10,19 @@ namespace DoublyLinkedList
         {
             var list = new ListRandom();
 
-            Console.WriteLine(list.IsEmpty);
-
             list.AddLast("first data");
             list.AddLast("second data");
             list.AddLast("third data");
             list.AddLast("fourth data");
             list.AddFirst("zero data");
 
-            list.Display();
+            list.AssignRandoms();
 
-            Console.WriteLine(list.Contains("third data"));
-            list.Remove("third data");
-            Console.WriteLine(list.Contains("third data"));
+            list.Serialize();
 
-            Console.WriteLine(list.IsEmpty);
-            list.Clear();
-            Console.WriteLine(list.IsEmpty);
+            var deserializedList = new ListRandom();
+
+            deserializedList.Deserialize();
         }
     }
 }

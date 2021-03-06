@@ -8,7 +8,8 @@ namespace DoublyLinkedList
         public ListNode Previous;
         public ListNode Next;
         public ListNode Random;
-        public readonly string Data;
+        public string Data;
+        public int Key; // излишние данные для ноды, убрать
 
         public ListNode(string data)
         {
