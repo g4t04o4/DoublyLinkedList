@@ -9,11 +9,5 @@ namespace DoublyLinkedList
         public ListNode Next;
         public ListNode Random;
         public string Data;
-        public int Key; // излишние данные для ноды, убрать
-
-        public ListNode(string data)
-        {
-            Data = data;
-        }
     }
 }
